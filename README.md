@@ -34,3 +34,8 @@ Since this extension is unpacked:
 - `scripting`: Clear `beforeunload` listeners when force-discarding stubborn tabs.
 - `processes`: Read per-tab process memory and provide process management (where Chromium supports the API).
 - `<all_urls>`: Inspect and manage tabs across domains.
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
+
