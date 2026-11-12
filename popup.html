@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoToSleep</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <div class="title-group">
+        <h1>Top Memory Tabs</h1>
+        <div class="subtitle" id="tabs-summary">Scanning tabs...</div>
+      </div>
+      <button id="refresh-btn" class="refresh-btn" title="Refresh memory metrics">
+        Refresh
+      </button>
+    </div>
+
+    <div class="memory-overview">
+      <div class="overview-stat">
+        <span class="overview-label" id="overview-label">Total Memory</span>
+        <span class="overview-value" id="total-memory-value">-- GB</span>
+        <span class="overview-hint" id="overview-hint">Across all browser processes</span>
+      </div>
+      <button id="discard-all-btn" class="discard-all-btn" title="Discard all tabs that do not need to be force discarded" disabled>
+        Discard Discardable (0)
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div id="loading" class="loading-container">
+      <div class="spinner"></div>
+      <span>Analyzing tab memory...</span>
+    </div>
+    <ul id="tab-list"></ul>
+    <div id="empty" class="empty-state" style="display: none;">
+      No open tabs found.
+    </div>
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
